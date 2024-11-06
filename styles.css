@@ -1,0 +1,38 @@
+body {
+    background-color: #121212; /* negro mate */
+    color: #f1f1f1; /* blanco/gris claro */
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  header {
+    background-color: #0a0a23; /* azul oscuro */
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+  
+  a {
+    color: #00bfff; /* azul claro */
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #007acc; /* azul más oscuro */
+  }
+  
+  section {
+    padding: 60px 20px;
+  }
+  
+  #proyectos .tarjeta {
+    background-color: #1a1a40; /* azul oscuro para tarjetas */
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+  }
+  
