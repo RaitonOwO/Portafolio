@@ -1,41 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Portafolio de Joan Santos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav>
-          <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Joan Santos</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="linkedin-icon.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.github.com" target="_blank">
+                    <img src="github-icon.png" alt="GitHub">
+                </a>
+            </div>
         </nav>
-      </header>
-      
-      <section id="inicio">
-        <h1>Juan Torra</h1>
-        <p>Desarrollador de Software</p>
-      </section>
-      
-      <section id="proyectos">
-        <!-- Aquí irán las tarjetas de proyectos -->
-      </section>
-      
-      <section id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <p>Descripción personal y tecnologías...</p>
-      </section>
-      
-      <section id="contacto">
-        <h2>Contacto</h2>
-        <!-- Formulario de contacto -->
-      </section>
-      
+    </header>
+
+    <section class="content">
+        <section id="inicio" class="intro">
+            <h2>Bienvenidos a mi portafolio</h2>
+            <p>Este es el espacio donde puedes ver mis proyectos, aprender más sobre mí y contactarme.</p>
+        </section>
+        <section id="proyectos">
+            <h2>Mis Proyectos</h2>
+            <div class="projects">
+                
+            </div>
+        </section>
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Soy desarrollador apasionado por la programación y las nuevas tecnologías...</p>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>¿Tienes alguna consulta? ¡No dudes en contactarme!</p>
+        </section>
+    </section>
 </body>
 </html>
