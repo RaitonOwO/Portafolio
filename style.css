@@ -6,27 +6,30 @@
   font-family: 'Arial', sans-serif;
 }
 
+/* Estilos generales */
 body {
-  background-color: #121212; 
-  color: #ffffff; 
+  background-color: #121212;
+  color: #ffffff;
   line-height: 1.6;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #1e1e1e; 
-  border-bottom: 2px solid #0066ff; 
+  background-color: #1e1e1e;
+  border-bottom: 2px solid #0066ff;
   position: sticky;
   top: 0;
   z-index: 10;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .navbar .logo h1 {
   font-size: 1.8rem;
-  color: #0066ff; 
+  color: #0066ff;
 }
 
 .navbar .menu {
@@ -45,13 +48,13 @@ body {
 }
 
 .navbar .menu li a:hover {
-  background-color: #0066ff; 
+  background-color: #0066ff;
   color: #121212;
 }
 
 .social-icons a {
   margin-left: 10px;
-  border-radius: 60%;
+  border-radius: 50%;
 }
 
 .social-icons img {
@@ -65,12 +68,23 @@ body {
   transform: scale(1.2);
 }
 
+/* Animación fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
+/* Sección Intro */
 .intro {
   text-align: center;
   padding: 5rem 2rem;
   background-color: #1e1e1e;
   border-bottom: 2px solid #0066ff;
+  position: relative;
 }
 
 .intro h2 {
@@ -83,18 +97,64 @@ body {
   font-size: 3rem;
   color: #ffffff;
   margin-bottom: 1rem;
+  animation: slideDown 1s ease-in-out;
 }
 
 .intro h3 {
   font-size: 1.8rem;
   color: #0066ff;
   margin-bottom: 1rem;
+  animation: slideDown 1.2s ease-in-out;
 }
 
 .intro p {
   font-size: 1rem;
   color: #b3b3b3;
   margin-bottom: 2rem;
+}
+
+.foto-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem; 
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none; 
+  margin: 0 auto;
+  padding: 0;
+  box-shadow: none; 
+}
+
+/* Si el problema es un contenedor */
+.contenedor-foto, .foto-perfil::before, .foto-perfil::after {
+  content: none; 
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+.foto-perfil::before,
+.foto-perfil::after {
+  content: '';
+  display: none; 
+}
+
+/* Animación */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .btn-cv {
@@ -106,16 +166,51 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .btn-cv:hover {
-  background-color: #004bbd; 
+  background-color: #004bbd;
 }
 
+/* Animación slideDown */
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Sección Sobre Mí */
+#sobre-mi {
+  padding: 4rem 2rem;
+  background-color: #121212;
+  text-align: center;
+}
+
+#sobre-mi h2 {
+  font-size: 2rem;
+  color: #0066ff;
+  margin-bottom: 1rem;
+}
+
+#sobre-mi p {
+  font-size: 1.2rem;
+  color: #b3b3b3;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Sección Habilidades */
 #habilidades {
   text-align: center;
   padding: 4rem 2rem;
-  background-color: #121212;
+  background-color: #1e1e1e;
 }
 
 #habilidades h2 {
@@ -135,30 +230,31 @@ body {
 }
 
 .tech-icons img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   transition: transform 0.3s;
-  border-radius: 60%;
+  border-radius: 50%;
 }
 
 .tech-icons img:hover {
   transform: scale(1.2);
 }
 
+/* Sección Proyectos */
 #proyectos {
   padding: 4rem 2rem;
-  background-color: #1e1e1e;
+  background-color: #121212;
   text-align: center;
 }
 
 #proyectos h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #0066ff; 
+  color: #0066ff;
 }
 
 .project-item {
-  background-color: #121212;
+  background-color: #1e1e1e;
   padding: 2rem;
   margin: 1rem auto;
   max-width: 600px;
@@ -181,23 +277,10 @@ body {
 .project-item p {
   font-size: 1rem;
   color: #b3b3b3;
+  text-align: justify;
 }
 
-#sobre-mi {
-  padding: 4rem 2rem;
-  background-color: #121212;
-  text-align: center;
-}
 
-#sobre-mi h2 {
-  font-size: 2rem;
-  color: #0066ff;
-  margin-bottom: 1rem;
-}
-
-#sobre-mi p {
-  font-size: 1.2rem;
-  color: #b3b3b3;
-  max-width: 800px;
-  margin: 0 auto;
+.intro::before {
+  content: none; 
 }
