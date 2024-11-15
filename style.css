@@ -51,6 +51,7 @@ body {
 
 .social-icons a {
   margin-left: 10px;
+  border-radius: 60%;
 }
 
 .social-icons img {
@@ -137,6 +138,7 @@ body {
   width: 50px;
   height: 50px;
   transition: transform 0.3s;
+  border-radius: 60%;
 }
 
 .tech-icons img:hover {
