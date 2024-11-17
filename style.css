@@ -82,7 +82,8 @@ body {
 .intro {
   display: flex;
   align-items: center; /* Alinea verticalmente el contenido */
-  justify-content: space-between; /* Alinea el texto a la izquierda y la imagen a la derecha */
+  flex-direction: column;
+  justify-content: space-between; 
   padding: 4rem 2rem;
   background-color: #1e1e1e;
   border-bottom: 2px solid #0066ff;
