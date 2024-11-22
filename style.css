@@ -1,27 +1,27 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #1c1c1c; /* Fondo gris oscuro */
+  background-color: #1c1c1c; 
   color: white;
 }
 
 /* NAV */
 header {
-  position: fixed; /* Barra fija */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo negro translúcido */
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 15px 0;
   z-index: 1000;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra */
-  backdrop-filter: blur(8px); /* Desenfoque */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px); 
 }
 
 .navbar {
   display: flex;
-  align-items: center; /* Centrado vertical */
-  justify-content: space-between; /* Ajusta separación entre logo y resto */
+  align-items: center; 
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -29,11 +29,10 @@ header {
 
 /* LOGO */
 .navbar .logo {
-  margin: 0; /* Elimina márgenes extra */
-  padding-left: 0; /* Elimina el espaciado interno */
-  position: absolute; /* Coloca el logo fuera del flujo normal */
-  left: 20px; /* Lo mueve completamente a la izquierda */
-}
+  margin: 0; 
+  padding-left: 0;
+  position: absolute; 
+  left: 20px; 
 
 /* MENÚ */
 .navbar .menu {
@@ -41,11 +40,11 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: 80px; /* Ajusta el menú para no tapar el logo */
+  margin-left: 80px; 
 }
 
 .navbar .menu li {
-  margin: 0 15px; /* Espaciado entre ítems */
+  margin: 0 15px; 
 }
 
 .navbar .menu a {
@@ -68,7 +67,7 @@ header {
 .navbar .social-icons {
   display: flex;
   align-items: center;
-  margin-left: auto; /* Mueve los íconos al extremo derecho */
+  margin-left: auto; 
 }
 
 .navbar .social-icons a img {
@@ -85,7 +84,7 @@ header {
 
 /* AJUSTE PARA EL CONTENIDO */
 body {
-  padding-top: 80px; /* Espacio para la barra fija */
+  padding-top: 80px; 
 }
 
 
@@ -135,10 +134,10 @@ body {
 
 /* Imagen de perfil */
 .intro img {
-  width: 150px; /* Tamaño de la imagen */
+  width: 150px; 
   height: 150px;
-  border-radius: 50%; /* Forma circular */
-  border: 3px solid #1e90ff; /* Borde azul */
+  border-radius: 50%; 
+  border: 3px solid #1e90ff; 
   object-fit: cover; 
   margin-top: 20px;
 }
@@ -189,69 +188,69 @@ body {
 }
 
 .tech-icons {
-  display: flex; /* Usamos flexbox para alinearlas horizontalmente */
-  flex-wrap: wrap; /* Permite que las imágenes se envuelvan a nuevas filas */
-  justify-content: space-between; /* Espacio entre las imágenes */
-  margin: 0 auto; /* Centra todo el contenedor */
-  max-width: 900px; /* Ancho máximo para que las imágenes no se estiren demasiado */
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  margin: 0 auto; 
+  max-width: 900px; 
 }
 
 .tech-icons img {
-  width: 20%; /* Las imágenes ocuparán un 20% del ancho del contenedor */
-  height: auto; /* Mantiene la proporción original */
+  width: 20%; 
+  height: auto; 
   transition: transform 0.3s ease;
-  margin-bottom: 30px; /* Aumento el espaciado vertical entre filas */
+  margin-bottom: 30px; 
 }
 
 .tech-icons img:hover {
-  transform: scale(1.1); /* Ligero zoom al pasar el cursor */
+  transform: scale(1.1); 
 }
 
 
 /* Ajustar el contenedor de proyectos */
 .project-container {
   display: flex;
-  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan si no caben */
-  justify-content: center; /* Centra horizontalmente las tarjetas */
-  gap: 30px; /* Espacio entre las tarjetas */
-  margin: 30px auto; /* Centra el contenedor en la página */
-  max-width: 1200px; /* Ancho máximo para mantener la estructura centrada */
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 30px; 
+  margin: 30px auto; 
+  max-width: 1200px; 
 }
 
 /* Estilo para las tarjetas */
 .project-item {
-  width: 480px; /* Más grande horizontalmente */
-  height: 320px; /* Ajuste proporcional de altura */
+  width: 480px; 
+  height: 320px; 
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más visible */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   background-color: #282828;
 }
 
 .project-item:hover {
-  transform: scale(1.05); /* Zoom ligero */
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); /* Más profundidad al pasar el cursor */
+  transform: scale(1.05); 
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); 
 }
 
 .project-image {
   width: 100%;
-  height: 100%; /* Asegura que el contenedor ocupa toda la tarjeta */
-  overflow: hidden; /* Evita que las imágenes sobresalgan */
+  height: 100%; 
+  overflow: hidden;
 }
 
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta la imagen para que llene el espacio sin deformarse */
+  object-fit: cover; 
   border-radius: 12px;
   transition: transform 0.4s ease;
 }
 
 
 .project-item:hover .project-image img {
-  transform: scale(1.1); /* Zoom en la imagen */
+  transform: scale(1.1); 
 }
 
 /* Superposición en las tarjetas */
@@ -261,7 +260,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8); /* Fondo negro con mayor opacidad */
+  background: rgba(0, 0, 0, 0.8); 
   color: #fff;
   opacity: 0;
   display: flex;
@@ -305,21 +304,21 @@ body {
 }
 
 #proyectos {
-  text-align: center; /* Asegura que el contenido esté centrado */
+  text-align: center;
 }
 
 
 
 #proyectos h2 {
-  font-size: 32px; /* Tamaño del texto */
-  color: #1e90ff; /* Color azul */
-  text-align: center; /* Centrar el texto dentro de su contenedor */
-  margin: 0 auto 20px; /* Centra el título y añade un margen inferior */
-  text-transform: uppercase; /* Convierte el texto a mayúsculas */
-  font-weight: bold; /* Hace el texto más grueso */
-  border-bottom: 2px solid #1e90ff; /* Línea decorativa debajo */
-  width: fit-content; /* Ajusta el ancho del título al contenido */
-  padding-bottom: 10px; /* Espaciado entre el texto y la línea */
+  font-size: 32px; 
+  color: #1e90ff; 
+  text-align: center; 
+  margin: 0 auto 20px; 
+  text-transform: uppercase; 
+  font-weight: bold; 
+  border-bottom: 2px solid #1e90ff; 
+  width: fit-content; 
+  padding-bottom: 10px; 
 }
 
 
