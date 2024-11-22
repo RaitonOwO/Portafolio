@@ -1,257 +1,332 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
-
-/* Estilos generales */
 body {
-  background-color: #121212;
-  color: #ffffff;
-  line-height: 1.6;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c; /* Fondo gris oscuro */
+  color: white;
 }
 
-/* Navbar */
+/* NAV */
+header {
+  position: fixed; /* Barra fija */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo negro translúcido */
+  padding: 15px 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra */
+  backdrop-filter: blur(8px); /* Desenfoque */
+}
+
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #1e1e1e;
-  border-bottom: 2px solid #0066ff;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  animation: fadeIn 1s ease-in-out;
+  align-items: center; /* Centrado vertical */
+  justify-content: space-between; /* Ajusta separación entre logo y resto */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.navbar .logo h1 {
-  font-size: 1.8rem;
-  color: #0066ff;
+/* LOGO */
+.navbar .logo {
+  margin: 0; /* Elimina márgenes extra */
+  padding-left: 0; /* Elimina el espaciado interno */
+  position: absolute; /* Coloca el logo fuera del flujo normal */
+  left: 20px; /* Lo mueve completamente a la izquierda */
 }
 
+/* MENÚ */
 .navbar .menu {
+  display: flex;
   list-style: none;
-  display: flex;
-  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  margin-left: 80px; /* Ajusta el menú para no tapar el logo */
 }
 
-.navbar .menu li a {
-  color: #ffffff;
+.navbar .menu li {
+  margin: 0 15px; /* Espaciado entre ítems */
+}
+
+.navbar .menu a {
   text-decoration: none;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.navbar .menu li a:hover {
-  background-color: #0066ff;
-  color: #121212;
-}
-
-.social-icons a {
-  margin-left: 10px;
-  border-radius: 50%;
-}
-
-.social-icons img {
-  width: 30px;
-  height: 30px;
-  filter: invert(1);
-  transition: transform 0.3s;
-}
-
-.social-icons img:hover {
-  transform: scale(1.2);
-}
-
-/* Animación fadeIn */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Contenedor de la sección intro */
-.intro {
-  display: flex;
-  align-items: center; /* Alinea verticalmente el contenido */
-  flex-direction: column;
-  justify-content: space-between; 
-  padding: 4rem 2rem;
-  background-color: #1e1e1e;
-  border-bottom: 2px solid #0066ff;
-}
-
-/* Contenedor del texto */
-.intro-texto {
-  flex: 2; /* El texto ocupa más espacio */
-  color: #b3b3b3;
-}
-
-.intro-texto h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.intro-texto h1 {
-  font-size: 3rem;
-  color: #ffffff;
-  margin-bottom: 1rem;
-}
-
-.intro-texto h3 {
-  font-size: 1.8rem;
-  color: #0066ff;
-  margin-bottom: 1rem;
-}
-
-.intro-texto p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-}
-
-.btn-cv {
-  padding: 0.8rem 1.5rem;
-  background-color: #0066ff;
+  font-size: 16px;
   color: white;
+  padding: 5px 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.navbar .menu a:hover {
+  color: black;
+  background-color: #1e90ff;
+}
+
+/* ÍCONOS SOCIALES */
+.navbar .social-icons {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Mueve los íconos al extremo derecho */
+}
+
+.navbar .social-icons a img {
+  width: 24px;
+  margin-left: 15px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.8;
+}
+
+.navbar .social-icons a img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* AJUSTE PARA EL CONTENIDO */
+body {
+  padding-top: 80px; /* Espacio para la barra fija */
+}
+
+
+
+
+.intro {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.intro h2 {
+  color: #1e90ff;
+  margin-bottom: 5px;
+}
+
+.intro h1 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.intro h3 {
+  color: #1e90ff;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.intro p {
+  font-size: 16px;
+  margin: 20px 0;
+  line-height: 1.5;
+  color: #d3d3d3;
+}
+
+.intro .btn-cv {
+  background-color: #1e90ff;
+  color: white;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.btn-cv:hover {
-  background-color: #0052cc;
+.intro .btn-cv:hover {
+  background-color: #4682b4;
 }
 
-/* Contenedor de la foto */
-.foto-container {
-  flex: 1; /* La imagen ocupa menos espacio */
-  display: flex;
-  justify-content: flex-end; /* Alinea la imagen al extremo derecho */
+/* Imagen de perfil */
+.intro img {
+  width: 150px; /* Tamaño de la imagen */
+  height: 150px;
+  border-radius: 50%; /* Forma circular */
+  border: 3px solid #1e90ff; /* Borde azul */
+  object-fit: cover; 
+  margin-top: 20px;
 }
 
-.foto-perfil {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #0066ff;
+/* Ajuste para la sección "Sobre mí" */
+#about-me {
+  padding: 50px 20px;
+  background-color: #282828;
+  border-top: 2px solid #1e90ff;
+  border-bottom: 2px solid #1e90ff;
 }
 
-
-/* Animación slideDown */
-@keyframes slideDown {
-  from {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Sección Sobre Mí */
-#sobre-mi {
-  padding: 4rem 2rem;
-  background-color: #121212;
-  text-align: center;
-}
-
-#sobre-mi h2 {
-  font-size: 2rem;
-  color: #0066ff;
-  margin-bottom: 1rem;
-}
-
-#sobre-mi p {
-  font-size: 1.2rem;
-  color: #b3b3b3;
+.about-card {
   max-width: 800px;
   margin: 0 auto;
-  line-height: 1.8;
+  padding: 20px;
+  text-align: center;
+  background-color: #1c1c1c;
+  border: 1px solid #1e90ff;
+  border-radius: 10px;
 }
 
-/* Sección Habilidades */
+.about-card h2 {
+  font-size: 28px;
+  color: #1e90ff;
+  margin-bottom: 20px;
+}
+
+.about-card p {
+  font-size: 16px;
+  color: #d3d3d3;
+  line-height: 1.6;
+}
+
+/* Tecnologías */
 #habilidades {
+  padding: 50px 20px;
   text-align: center;
-  padding: 4rem 2rem;
-  background-color: #1e1e1e;
 }
 
 #habilidades h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 24px;
+  margin-bottom: 30px;
 }
 
-#habilidades .highlight {
-  color: #0066ff;
+.highlight {
+  color: #1e90ff;
 }
 
 .tech-icons {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  display: flex; /* Usamos flexbox para alinearlas horizontalmente */
+  flex-wrap: wrap; /* Permite que las imágenes se envuelvan a nuevas filas */
+  justify-content: space-between; /* Espacio entre las imágenes */
+  margin: 0 auto; /* Centra todo el contenedor */
+  max-width: 900px; /* Ancho máximo para que las imágenes no se estiren demasiado */
 }
 
 .tech-icons img {
-  width: 60px;
-  height: 60px;
-  transition: transform 0.3s;
-  border-radius: 50%;
+  width: 20%; /* Las imágenes ocuparán un 20% del ancho del contenedor */
+  height: auto; /* Mantiene la proporción original */
+  transition: transform 0.3s ease;
+  margin-bottom: 30px; /* Aumento el espaciado vertical entre filas */
 }
 
 .tech-icons img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1); /* Ligero zoom al pasar el cursor */
 }
 
-/* Sección Proyectos */
-#proyectos {
-  padding: 4rem 2rem;
-  background-color: #121212;
-  text-align: center;
+
+/* Ajustar el contenedor de proyectos */
+.project-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan si no caben */
+  justify-content: center; /* Centra horizontalmente las tarjetas */
+  gap: 30px; /* Espacio entre las tarjetas */
+  margin: 30px auto; /* Centra el contenedor en la página */
+  max-width: 1200px; /* Ancho máximo para mantener la estructura centrada */
 }
 
-#proyectos h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #0066ff;
-}
-
+/* Estilo para las tarjetas */
 .project-item {
-  background-color: #1e1e1e;
-  padding: 2rem;
-  margin: 1rem auto;
-  max-width: 600px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s;
-  border: 1px solid #0066ff;
+  width: 480px; /* Más grande horizontalmente */
+  height: 320px; /* Ajuste proporcional de altura */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más visible */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: #282828;
 }
 
 .project-item:hover {
-  transform: scale(1.02);
+  transform: scale(1.05); /* Zoom ligero */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); /* Más profundidad al pasar el cursor */
 }
 
-.project-item h3 {
-  font-size: 1.5rem;
-  color: #ffffff;
-  margin-bottom: 1rem;
+.project-image {
+  width: 100%;
+  height: 100%; /* Asegura que el contenedor ocupa toda la tarjeta */
+  overflow: hidden; /* Evita que las imágenes sobresalgan */
 }
 
-.project-item p {
-  font-size: 1rem;
-  color: #b3b3b3;
-  text-align: justify;
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que llene el espacio sin deformarse */
+  border-radius: 12px;
+  transition: transform 0.4s ease;
 }
 
 
+.project-item:hover .project-image img {
+  transform: scale(1.1); /* Zoom en la imagen */
+}
+
+/* Superposición en las tarjetas */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8); /* Fondo negro con mayor opacidad */
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
+}
+
+.project-item:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay h3 {
+  font-size: 1.7em;
+  margin-bottom: 15px;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.project-item:hover .project-overlay h3 {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.project-overlay p {
+  font-size: 1.1em;
+  margin: 10px 20px 0;
+  line-height: 1.5;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease 0.1s;
+}
+
+.project-item:hover .project-overlay p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#proyectos {
+  text-align: center; /* Asegura que el contenido esté centrado */
+}
+
+
+
+#proyectos h2 {
+  font-size: 32px; /* Tamaño del texto */
+  color: #1e90ff; /* Color azul */
+  text-align: center; /* Centrar el texto dentro de su contenedor */
+  margin: 0 auto 20px; /* Centra el título y añade un margen inferior */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  font-weight: bold; /* Hace el texto más grueso */
+  border-bottom: 2px solid #1e90ff; /* Línea decorativa debajo */
+  width: fit-content; /* Ajusta el ancho del título al contenido */
+  padding-bottom: 10px; /* Espaciado entre el texto y la línea */
+}
+
+
+
+/* Responsive: Una tarjeta por fila en dispositivos pequeños */
+@media (max-width: 768px) {
+  .project-item {
+    width: 100%; 
+  }
+}
