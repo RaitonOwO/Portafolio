@@ -206,6 +206,57 @@ body {
 .tech-icons img:hover {
   transform: scale(1.1); 
 }
+/* Estilo general para el apartado de misión y visión */
+#mision-vision {
+  padding: 60px 20px;
+  background-color: #1c1c1c; 
+  color: #fff;
+}
+
+#mision-vision .seccion-titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #0099ff; 
+}
+
+.mision-vision-contenido {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+}
+
+.mision, .vision {
+  background-color: #292929; 
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.subtitulo {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #0099ff;
+}
+
+.mision p, .vision p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Diseño para pantallas más grandes */
+@media (min-width: 768px) {
+  .mision-vision-contenido {
+    flex-direction: row; 
+    justify-content: center;
+  }
+
+  .mision, .vision {
+    flex: 1;
+    margin: 0 10px;
+  }
+}
 
 
 /* Ajustar el contenedor de proyectos */
@@ -254,28 +305,29 @@ body {
   transform: scale(1.1);
 }
 
-/* Superposición en las tarjetas */
 .project-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8); 
-  color: #fff;
-  opacity: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  color: #fff;
   transition: opacity 0.3s ease;
   border-radius: 12px;
+  pointer-events: none; 
 }
 
 .project-item:hover .project-overlay {
-  opacity: 1;
+  opacity: 1; 
+  pointer-events: auto; 
 }
+
 
 .project-overlay h3 {
   font-size: 1.7em;
