@@ -42,18 +42,22 @@ function activarAnimacion() {
   
 
 ////////////////////////////////////
-  document.addEventListener('DOMContentLoaded', () => {
-    const projectItems = document.querySelectorAll('.project-item');
-  
-    projectItems.forEach(item => {
-      item.addEventListener('click', () => {
+document.addEventListener('DOMContentLoaded', () => {
+  const projectItems = document.querySelectorAll('.project-item');
+
+  projectItems.forEach(item => {
+    item.addEventListener('click', (event) => {
+      // Solo activar si el clic es en el overlay o áreas específicas
+      if (event.target.closest('.project-overlay')) {
         const link = item.getAttribute('data-link');
         if (link) {
-          window.open(link, '_blank'); 
+          window.open(link, '_blank');
         }
-      });
+      }
     });
   });
+});
+
   
 
 
